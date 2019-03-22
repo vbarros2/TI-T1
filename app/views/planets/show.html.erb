@@ -1,0 +1,82 @@
+<p id="notice"><%= notice %></p>
+
+<p class="text-white bg-dark">
+  <strong>Name:</strong>
+  <%= @planet['name'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Rotation period:</strong>
+  <%= @planet['rotation_period'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Orbital period:</strong>
+  <%= @planet['orbital_period'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Diameter:</strong>
+  <%= @planet['diameter'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Climate:</strong>
+  <%= @planet['climate'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Gravity:</strong>
+  <%= @planet['gravity'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Terrain:</strong>
+  <%= @planet['terrain'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Surface water:</strong>
+  <%= @planet['surface_water'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Population:</strong>
+  <%= @planet['population'] %>
+</p>
+
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">Residents</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @characters.each do |cha| %>
+    <tr scope="row">
+      <td><li><%= link_to cha , character_url(@cha_id) %></li></td>
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">Films</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @films.each do |film| %>
+    <tr scope="row">
+    <td><li><%= link_to film , film_url(@film_id) %></li></td>
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
+<%= link_to 'Back', planets_path %>

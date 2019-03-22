@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_22_194236) do
+ActiveRecord::Schema.define(version: 2019_03_22_211858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,39 @@ ActiveRecord::Schema.define(version: 2019_03_22_194236) do
     t.datetime "updated_at", null: false
     t.string "vehicle"
     t.string "openingcrawl"
+  end
+
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.string "rotation_period"
+    t.string "orbital_period"
+    t.string "diameter"
+    t.string "climate"
+    t.string "gravity"
+    t.string "terrain"
+    t.string "surface_water"
+    t.string "population"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "starships", force: :cascade do |t|
+    t.string "name"
+    t.string "model"
+    t.string "manufacturer"
+    t.string "cost_in_credits"
+    t.string "length"
+    t.string "max_atmosphering_speed"
+    t.string "crew"
+    t.string "passengers"
+    t.string "cargo_capacity"
+    t.string "consumables"
+    t.string "hyperdrive_rating"
+    t.string "mglt"
+    t.string "starship_class"
+    t.string "pilots"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

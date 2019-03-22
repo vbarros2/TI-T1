@@ -58,4 +58,21 @@
  </tbody>
 </table>
 
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">StarShips</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @starships.each do |star| %>
+    <tr scope="row">
+      <td><li><%= link_to star , starship_url(@star_id) %></li></td>
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
 <%= link_to 'Back', characters_path %>

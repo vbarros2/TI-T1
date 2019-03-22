@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  	resources :planets do
+  		get 'planets/:id'=> 'planets#show'
+  	end
+  	resources :starships do
+  		get 'starships/:id'=> 'starships#show'
+  	end
+  	
   	resources :characters do
   		get 'characters/:id'=> 'characters#show'
   	end

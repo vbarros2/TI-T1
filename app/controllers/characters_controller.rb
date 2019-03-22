@@ -20,6 +20,13 @@ class CharactersController < ApplicationController
     :headers =>{'Content-Type' => 'application/json'} )['title'])
     end
 
+    @starships = []
+    @character['starships'].each do |star|
+      @star_id = star.split('/')[5]
+      @starships.push(HTTParty.get("https://swapi.co/api/starships/#{@star_id}",
+    :headers =>{'Content-Type' => 'application/json'} )['name']) 
+    end
+
   end
 
   # GET /characters/new

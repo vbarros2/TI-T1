@@ -41,23 +41,23 @@ class FilmsController < ApplicationController
     
     @characters = []
     @film['characters'].each do |cha|
-      cha_id = cha.split('/')[5]
-      @characters.push(HTTParty.get("https://swapi.co/api/people/#{cha_id}",
-    :headers =>{'Content-Type' => 'application/json'} ))
+      @cha_id = cha.split('/')[5]
+      @characters.push(HTTParty.get("https://swapi.co/api/people/#{@cha_id}",
+    :headers =>{'Content-Type' => 'application/json'} )['name'])
     end
 
 
     @starships = []
     @film['starships'].each do |star|
-      star_id = star.split('/')[5]
-      @starships.push(HTTParty.get("https://swapi.co/api/starships/#{star_id}",
+      @star_id = star.split('/')[5]
+      @starships.push(HTTParty.get("https://swapi.co/api/starships/#{@star_id}",
     :headers =>{'Content-Type' => 'application/json'} )['name']) 
     end
 
     @planets = []
     @film['planets'].each do |planet|
-      planet_id = planet.split('/')[5]
-      @planets.push(HTTParty.get("https://swapi.co/api/planets/#{planet_id}",
+      @planet_id = planet.split('/')[5]
+      @planets.push(HTTParty.get("https://swapi.co/api/planets/#{@planet_id}",
     :headers =>{'Content-Type' => 'application/json'} )['name']) 
     end
 

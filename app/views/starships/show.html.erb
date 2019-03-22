@@ -1,0 +1,103 @@
+<p id="notice"><%= notice %></p>
+
+<p class="text-white bg-dark">
+  <strong>Name:</strong>
+  <%= @starship['name'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Model:</strong>
+  <%= @starship['model'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Manufacturer:</strong>
+  <%= @starship['manufacturer'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Cost in credits:</strong>
+  <%= @starship['cost_in_credits'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Length:</strong>
+  <%= @starship['length'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Max atmosphering speed:</strong>
+  <%= @starship['max_atmosphering_speed'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Crew:</strong>
+  <%= @starship['crew'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Passengers:</strong>
+  <%= @starship['passengers'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Cargo capacity:</strong>
+  <%= @starship['cargo_capacity'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Consumables:</strong>
+  <%= @starship['consumables'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Hyperdrive rating:</strong>
+  <%= @starship['hyperdrive_rating'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Mglt:</strong>
+  <%= @starship['mglt'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Starship class:</strong>
+  <%= @starship['starship_class'] %>
+</p>
+
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">Pilots</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @pilots.each do |pilot| %>
+    <tr scope="row">
+      <td><li><%= link_to pilot , character_url(@pilot_id) %></li></td>
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">Films</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @films.each do |film| %>
+    <tr scope="row">
+    <td><li><%= link_to film , film_url(@film_id) %></li></td>
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
+
+<%= link_to 'Back', starships_path %>
