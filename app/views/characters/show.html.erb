@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<p class="text-white bg-dark">
+  <strong>Name:</strong>
+  <%= @character['name'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Height:</strong>
+  <%= @character['height'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Mass:</strong>
+  <%= @character['mass'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Hair color:</strong>
+  <%= @character['hair_color'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Skin color:</strong>
+  <%= @character['skin_color'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Eye color:</strong>
+  <%= @character['eye_color'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Birth year:</strong>
+  <%= @character['birth_year'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Gender:</strong>
+  <%= @character['gender'] %>
+</p>
+
+
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">Films</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @films.each do |film| %>
+    <tr scope="row">
+    <td><li><%= link_to film , film_url(@film_id) %></li></td>
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
+<%= link_to 'Back', characters_path %>

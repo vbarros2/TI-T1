@@ -1,0 +1,93 @@
+<p id="notice"><%= notice %></p>
+
+<p class="text-white bg-dark">
+  <strong>Title:</strong>
+  <%= @film['title'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Release Date:</strong>
+  <%= @film['release_date'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Director:</strong>
+  <%= @film['director'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Producer:</strong>
+  <%= @film['producer'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Episode:</strong>
+  <%= @film['episode_id'] %>
+</p>
+
+<p class="text-white bg-dark">
+  <strong>Opening Crawl:</strong>
+  <%= @film['opening_crawl'] %>
+</p>
+
+
+
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">Characters</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @characters.each do |cha| %>
+    <% id = cha['url'].split('/')[5] %>
+    <tr scope="row">
+    <td><li><%= link_to cha['name'] , character_url(id) %></li></td>
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
+
+
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">StarShips</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @starships.each do |star| %>
+    <tr scope="row">
+      <td><%= star %></td>
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
+
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">Planets</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @planets.each do |planet| %>
+    <tr scope="row">
+      <td><%= planet %></td>
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
+
+<p class="text-white bg-dark">
+<%= link_to 'Back', films_path %>
+</p>

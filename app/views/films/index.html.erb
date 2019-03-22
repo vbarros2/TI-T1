@@ -1,0 +1,30 @@
+<h1 class="text-center">Peliculas</h1>
+
+<table class="table table-dark" id="table1">
+ <thead>
+  <tr>
+    <th scope="col">Nombre</th>
+    <th scope="col">Año Lanzamiento</th>
+    <th scope="col">Director</th>
+    <th scope="col">Productores</th>
+    <th scope="col">Episodio</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @films.each do |film| %>
+    <tr scope="row">
+      <td><li><%= link_to film['title'] , film_url(film['episode_id']) %></li></td>
+      <td><%= film['release_date'][0..3] %></td>
+      <td><%= film['director'] %></td>
+      <td><%= film['producer'] %></td>
+      <td><%= film['episode_id'] %></td>
+      
+
+      
+    </tr>
+  <% end %>
+ </tbody>
+</table>
+
+<br>
