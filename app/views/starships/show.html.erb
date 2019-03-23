@@ -75,7 +75,8 @@
  <tbody>
   <% @pilots.each do |pilot| %>
     <tr scope="row">
-      <td><li><%= link_to pilot , character_url(@pilot_id) %></li></td>
+      <% pilot_id = pilot['url'].split('/')[5] %>
+      <td><li><%= link_to pilot['name'] , character_url(pilot_id) %></li></td>
       
     </tr>
   <% end %>
@@ -92,7 +93,8 @@
  <tbody>
   <% @films.each do |film| %>
     <tr scope="row">
-    <td><li><%= link_to film , film_url(@film_id) %></li></td>
+      <% film_id = film['url'].split('/')[5] %>
+      <td><li><%= link_to film['title'] , film_url(film_id) %></li></td>
       
     </tr>
   <% end %>

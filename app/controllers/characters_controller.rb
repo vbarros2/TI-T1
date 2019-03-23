@@ -15,16 +15,16 @@ class CharactersController < ApplicationController
 
     @films = []
     @character['films'].each do |film|
-      @film_id = film.split('/')[5]
-      @films.push(HTTParty.get("https://swapi.co/api/films/#{@film_id}",
-    :headers =>{'Content-Type' => 'application/json'} )['title'])
+      film_id = film.split('/')[5]
+      @films.push(HTTParty.get("https://swapi.co/api/films/#{film_id}",
+    :headers =>{'Content-Type' => 'application/json'} ))
     end
 
     @starships = []
     @character['starships'].each do |star|
-      @star_id = star.split('/')[5]
-      @starships.push(HTTParty.get("https://swapi.co/api/starships/#{@star_id}",
-    :headers =>{'Content-Type' => 'application/json'} )['name']) 
+      star_id = star.split('/')[5]
+      @starships.push(HTTParty.get("https://swapi.co/api/starships/#{star_id}",
+    :headers =>{'Content-Type' => 'application/json'} )) 
     end
 
   end

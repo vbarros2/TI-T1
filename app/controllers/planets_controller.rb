@@ -15,16 +15,16 @@ class PlanetsController < ApplicationController
 
     @characters = []
     @planet['residents'].each do |cha|
-      @cha_id = cha.split('/')[5]
-      @characters.push(HTTParty.get("https://swapi.co/api/people/#{@cha_id}",
-    :headers =>{'Content-Type' => 'application/json'} )['name'])
+      cha_id = cha.split('/')[5]
+      @characters.push(HTTParty.get("https://swapi.co/api/people/#{cha_id}",
+    :headers =>{'Content-Type' => 'application/json'} ))
     end
 
     @films = []
     @planet['films'].each do |film|
-      @film_id = film.split('/')[5]
-      @films.push(HTTParty.get("https://swapi.co/api/films/#{@film_id}",
-    :headers =>{'Content-Type' => 'application/json'} )['title'])
+      film_id = film.split('/')[5]
+      @films.push(HTTParty.get("https://swapi.co/api/films/#{film_id}",
+    :headers =>{'Content-Type' => 'application/json'} ))
     end
 
   end

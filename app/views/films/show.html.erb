@@ -42,7 +42,8 @@
  <tbody>
   <% @characters.each do |cha| %>
     <tr scope="row">
-      <td><li><%= link_to cha , character_url(@cha_id) %></li></td>
+      <% cha_id = cha['url'].split('/')[5] %>
+      <td><li><%= link_to cha['name'] , character_url(cha_id) %></li></td>
       
     </tr>
   <% end %>
@@ -61,7 +62,8 @@
  <tbody>
   <% @starships.each do |star| %>
     <tr scope="row">
-      <td><li><%= link_to star , starship_url(@star_id) %></li></td>
+      <% star_id = star['url'].split('/')[5] %>
+      <td><li><%= link_to star['name'] , starship_url(star_id) %></li></td>
       
     </tr>
   <% end %>
@@ -79,7 +81,8 @@
  <tbody>
   <% @planets.each do |planet| %>
     <tr scope="row">
-      <td><li><%= link_to planet , planet_url(@planet_id) %></li></td>
+      <% planet_id = planet['url'].split('/')[5] %>
+      <td><li><%= link_to planet['name'] , planet_url(planet_id) %></li></td>
       
     </tr>
   <% end %>
