@@ -11,6 +11,15 @@ class FilmsController < ApplicationController
     @films = HTTParty.get('https://swapi.co/api/films',
     :headers =>{'Content-Type' => 'application/json'} )['results']
 
+    @characters = HTTParty.get('https://swapi.co/api/people',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+    @starships = HTTParty.get('https://swapi.co/api/starships',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+    @planets = HTTParty.get('https://swapi.co/api/planets',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
   end
 
   # GET /films/1
