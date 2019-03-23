@@ -44,10 +44,24 @@ class FilmsController < ApplicationController
     elsif params[:id] == "9"
       params[:id] = "9"
     end
+
+    @films = HTTParty.get('https://swapi.co/api/films',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+    @characters_all = HTTParty.get('https://swapi.co/api/people',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+    @starships_all = HTTParty.get('https://swapi.co/api/starships',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+    @planets_all = HTTParty.get('https://swapi.co/api/planets',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+
+
     @film = HTTParty.get("https://swapi.co/api/films/#{params[:id]}",
     :headers =>{'Content-Type' => 'application/json'} )
 
-    
     @characters = []
     @film['characters'].each do |cha|
       cha_id = cha.split('/')[5]

@@ -10,6 +10,19 @@ class CharactersController < ApplicationController
   # GET /characters/1
   # GET /characters/1.json
   def show
+    @films = HTTParty.get('https://swapi.co/api/films',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+    @characters_all = HTTParty.get('https://swapi.co/api/people',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+    @starships_all = HTTParty.get('https://swapi.co/api/starships',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+    @planets_all = HTTParty.get('https://swapi.co/api/planets',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+
+    
     @character = HTTParty.get("https://swapi.co/api/people/#{params[:id]}",
     :headers =>{'Content-Type' => 'application/json'} )
 
