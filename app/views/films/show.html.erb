@@ -86,7 +86,7 @@ function filterFunction() {
   }
 }
 </script>
-<h1 class="text-center">Peliculas</h1>
+<h1 class="text-center">Film</h1>
 
 
 <div class="dropdown">
@@ -94,7 +94,7 @@ function filterFunction() {
   <div id="myDropdown" class="dropdown-content">
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
     
-    <% @films.each do |film| %>
+    <% @films_all.each do |film| %>
       <a><%= link_to film['title'] , film_url(film['episode_id']) %></a>
     <% end %>
 

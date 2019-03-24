@@ -45,7 +45,7 @@ class FilmsController < ApplicationController
       params[:id] = "9"
     end
 
-    @films = HTTParty.get('https://swapi.co/api/films',
+    @films_all = HTTParty.get('https://swapi.co/api/films',
     :headers =>{'Content-Type' => 'application/json'} )['results']
 
     @characters_all = HTTParty.get('https://swapi.co/api/people',

@@ -10,7 +10,7 @@ class StarshipsController < ApplicationController
   # GET /starships/1
   # GET /starships/1.json
   def show
-    @films = HTTParty.get('https://swapi.co/api/films',
+    @films_all = HTTParty.get('https://swapi.co/api/films',
     :headers =>{'Content-Type' => 'application/json'} )['results']
 
     @characters_all = HTTParty.get('https://swapi.co/api/people',
