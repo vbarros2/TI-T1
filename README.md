@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+La tarea la realice en Rails ya que segun me averigue era la mejor forma de solucionarla, el problema de esto es que no me manejo en el idioma, pero finalmente logre un buen resultado con muchas horas de entrenamiento y tutoriales en internet, como tambien con la ayuda de compañeros. Digo esto porque que quizas el codigo no sea lo mas eficiente que hay, pero es debido a mi poco conocimiento.
 
-Things you may want to cover:
+Para consumir la API utilice la gema HTTParty
 
-* Ruby version
+Conecte la aplicacion a heroko pero no pude hacer el deploy automatico (lo que salia en el enunciado)
 
-* System dependencies
+Link de heroku:
 
-* Configuration
+https://guarded-wave-54202.herokuapp.com/
 
-* Database creation
 
-* Database initialization
+Dejo algunos links de los cuales saque informacion para hacer la Tarea:
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+https://github.com/jnunemaker/httparty
 
-* ...
+https://www.youtube.com/watch?v=4qSsHY-Lkpg
+
+http://www.mattmorgante.com/technology/httparty
+
+https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
+
+https://stackoverflow.com/questions/7455744/post-json-to-api-using-rails-and-httparty
