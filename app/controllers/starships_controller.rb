@@ -12,14 +12,45 @@ class StarshipsController < ApplicationController
   def show
     @films_all = HTTParty.get('https://swapi.co/api/films',
     :headers =>{'Content-Type' => 'application/json'} )['results']
-
-    @characters_all = HTTParty.get('https://swapi.co/api/people',
+    @characters_all_1 = HTTParty.get('https://swapi.co/api/people',
     :headers =>{'Content-Type' => 'application/json'} )['results']
-
-    @starships_all = HTTParty.get('https://swapi.co/api/starships',
+    @characters_all_2 = HTTParty.get('https://swapi.co/api/people/?page=2',
     :headers =>{'Content-Type' => 'application/json'} )['results']
-
-    @planets_all = HTTParty.get('https://swapi.co/api/planets',
+    @characters_all_3 = HTTParty.get('https://swapi.co/api/people/?page=3',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @characters_all_4 = HTTParty.get('https://swapi.co/api/people/?page=4',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @characters_all_5 = HTTParty.get('https://swapi.co/api/people/?page=5',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @characters_all_6 = HTTParty.get('https://swapi.co/api/people/?page=6',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @characters_all_7 = HTTParty.get('https://swapi.co/api/people/?page=7',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @characters_all_8 = HTTParty.get('https://swapi.co/api/people/?page=8',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @characters_all_9 = HTTParty.get('https://swapi.co/api/people/?page=9',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @starships_all_1 = HTTParty.get('https://swapi.co/api/starships',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @starships_all_2 = HTTParty.get('https://swapi.co/api/starships/?page=2',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @starships_all_3 = HTTParty.get('https://swapi.co/api/starships/?page=3',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @starships_all_4 = HTTParty.get('https://swapi.co/api/starships/?page=4',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @planets_all_1 = HTTParty.get('https://swapi.co/api/planets',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @planets_all_2 = HTTParty.get('https://swapi.co/api/planets/?page=2',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @planets_all_3 = HTTParty.get('https://swapi.co/api/planets/?page=3',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @planets_all_4 = HTTParty.get('https://swapi.co/api/planets/?page=4',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @planets_all_5 = HTTParty.get('https://swapi.co/api/planets/?page=5',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @planets_all_6 = HTTParty.get('https://swapi.co/api/planets/?page=6',
+    :headers =>{'Content-Type' => 'application/json'} )['results']
+    @planets_all_7 = HTTParty.get('https://swapi.co/api/planets/?page=7',
     :headers =>{'Content-Type' => 'application/json'} )['results']
 
     

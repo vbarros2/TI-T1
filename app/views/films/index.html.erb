@@ -93,25 +93,89 @@ function filterFunction() {
   <button onclick="myFunction()" class="dropbtn">Search</button>
   <div id="myDropdown" class="dropdown-content">
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <% @films.each do |film| %>
+    <% @films_all.each do |film| %>
       <a><%= link_to film['title'] , film_url(film['episode_id']) %></a>
     <% end %>
-
-    <% @characters.each do |cha| %>
+    <% @characters_all_1.each do |cha| %>
       <% cha_id = cha['url'].split('/')[5] %>
       <a><%= link_to cha['name'] , character_url(cha_id) %></a>
     <% end %>
-
-    <% @starships.each do |star| %>
+    <% @characters_all_2.each do |cha| %>
+      <% cha_id = cha['url'].split('/')[5] %>
+      <a><%= link_to cha['name'] , character_url(cha_id) %></a>
+    <% end %>
+    <% @characters_all_3.each do |cha| %>
+      <% cha_id = cha['url'].split('/')[5] %>
+      <a><%= link_to cha['name'] , character_url(cha_id) %></a>
+    <% end %>
+    <% @characters_all_4.each do |cha| %>
+      <% cha_id = cha['url'].split('/')[5] %>
+      <a><%= link_to cha['name'] , character_url(cha_id) %></a>
+    <% end %>
+    <% @characters_all_5.each do |cha| %>
+      <% cha_id = cha['url'].split('/')[5] %>
+      <a><%= link_to cha['name'] , character_url(cha_id) %></a>
+    <% end %>
+    <% @characters_all_6.each do |cha| %>
+      <% cha_id = cha['url'].split('/')[5] %>
+      <a><%= link_to cha['name'] , character_url(cha_id) %></a>
+    <% end %>
+    <% @characters_all_7.each do |cha| %>
+      <% cha_id = cha['url'].split('/')[5] %>
+      <a><%= link_to cha['name'] , character_url(cha_id) %></a>
+    <% end %>
+    <% @characters_all_8.each do |cha| %>
+      <% cha_id = cha['url'].split('/')[5] %>
+      <a><%= link_to cha['name'] , character_url(cha_id) %></a>
+    <% end %>
+    <% @characters_all_9.each do |cha| %>
+      <% cha_id = cha['url'].split('/')[5] %>
+      <a><%= link_to cha['name'] , character_url(cha_id) %></a>
+    <% end %>
+    <% @starships_all_1.each do |star| %>
       <% star_id = star['url'].split('/')[5] %>
       <a><%= link_to star['name'] , starship_url(star_id) %></a>
     <% end %>
-
-    <% @planets.each do |planet| %>
+    <% @starships_all_2.each do |star| %>
+      <% star_id = star['url'].split('/')[5] %>
+      <a><%= link_to star['name'] , starship_url(star_id) %></a>
+    <% end %>
+    <% @starships_all_3.each do |star| %>
+      <% star_id = star['url'].split('/')[5] %>
+      <a><%= link_to star['name'] , starship_url(star_id) %></a>
+    <% end %>
+    <% @starships_all_4.each do |star| %>
+      <% star_id = star['url'].split('/')[5] %>
+      <a><%= link_to star['name'] , starship_url(star_id) %></a>
+    <% end %>
+    <% @planets_all_1.each do |planet| %>
       <% planet_id = planet['url'].split('/')[5] %>
       <a><%= link_to planet['name'] , planet_url(planet_id) %></a>
     <% end %>
-
+    <% @planets_all_2.each do |planet| %>
+      <% planet_id = planet['url'].split('/')[5] %>
+      <a><%= link_to planet['name'] , planet_url(planet_id) %></a>
+    <% end %>
+    <% @planets_all_3.each do |planet| %>
+      <% planet_id = planet['url'].split('/')[5] %>
+      <a><%= link_to planet['name'] , planet_url(planet_id) %></a>
+    <% end %>
+    <% @planets_all_4.each do |planet| %>
+      <% planet_id = planet['url'].split('/')[5] %>
+      <a><%= link_to planet['name'] , planet_url(planet_id) %></a>
+    <% end %>
+    <% @planets_all_5.each do |planet| %>
+      <% planet_id = planet['url'].split('/')[5] %>
+      <a><%= link_to planet['name'] , planet_url(planet_id) %></a>
+    <% end %>
+    <% @planets_all_6.each do |planet| %>
+      <% planet_id = planet['url'].split('/')[5] %>
+      <a><%= link_to planet['name'] , planet_url(planet_id) %></a>
+    <% end %>
+    <% @planets_all_7.each do |planet| %>
+      <% planet_id = planet['url'].split('/')[5] %>
+      <a><%= link_to planet['name'] , planet_url(planet_id) %></a>
+    <% end %>
   </div>
 </div>
 
@@ -128,7 +192,7 @@ function filterFunction() {
  </thead>
 
  <tbody>
-  <% @films.each do |film| %>
+  <% @films_all.each do |film| %>
     <tr scope="row">
       <td><li><%= link_to film['title'] , film_url(film['episode_id']) %></li></td>
       <td><%= film['release_date'][0..3] %></td>
